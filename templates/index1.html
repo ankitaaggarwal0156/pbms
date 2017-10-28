@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<title>Keck Miners</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.fa-plus-square,.fa-tint,.fa-wheelchair, .fa-heartbeat {font-size:200px}
+</style>
+<body>
+<br>
+<div id="predict1" class="w3-grey w3-container" style="height:700px">
+    <div class="w3-padding-30 w3-padding-large">
+<form name="form1" class="w3-container w3-card-2 w3-padding-10 w3-white">
+{% if predictionList[4]=='No' %}
+<br><br><center><label> No Allogeneic Transfusion, Amount of blood to be pre-ordered = 0 </label></center>
+<div style="display:none;">
+{% else %}
+<div style="display: block;">
+{% endif %}
+        <div class="w3-section">
+          <label>Allogeneic Blood Transfusion recommended with below amounts of blood units: </label> 
+          <!--input class="w3-input" style="width:100%;" type="text" value ="{{predictionList[4] }}"/-->
+        </div>
+        <div class="w3-section">
+   <label>SN - BM - Red Blood Cells: </label><input class="w3-input" style="width:100%;" type="text" value ="{{ predictionList[0] }}"/>
+   </div>
+   <div class="w3-section">
+   <label>SN - BM - Platelets :</label><input class="w3-input" style="width:100%;" type="text" value ="{{ predictionList[1] }}"/>
+   </div>
+   <div class="w3-section">
+   <label>SN - BM - Fresh Frozen Plasma :</label><input class="w3-input" style="width:100%;" type="text" value ="{{ predictionList[2] }}"/></div>
+   <div class="w3-section">
+   <label>SN - BM - Cryoprecipitate :</label><input class="w3-input" style="width:100%;" type="text" value ="{{ predictionList[3] }}"/></div>
+   </div>
+<br><br><br><center>
+<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="goBack()">Back</button></center>	
+</form>
+
+</div>
+</div>
+</body>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+</html>

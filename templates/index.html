@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html>
+<title>Keck Miners</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.fa-plus-square,.fa-tint,.fa-wheelchair, .fa-heartbeat, .fa-hospital-o {font-size:200px}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card-2 w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#top" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="#train" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Train</a>
+    <a href="#predict" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Predict</a>
+    <a href="#help" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Help</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#train" class="w3-bar-item w3-button w3-padding-large">Train</a>
+    <a href="#predict" class="w3-bar-item w3-button w3-padding-large">Predict</a>
+    <a href="#help" class="w3-bar-item w3-button w3-padding-large">Help</a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large">About</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">Patient Blood Management System</h1>
+  <p class="w3-xlarge"><font face="Times New Roman" size ="70px" color="black">Keck School of Medicine of USC</font></p>
+  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><a href="#start" style="text-decoration: none;">Get Started</a></button>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container" id="start">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>What we do?</h1>
+      <h5 class="w3-padding-32">Patient Blood Management System,to address needs of patients, as well as improving business processes and revenue (ex: cancelled surgeries, cost of blood products).The system predicts the amount of blood products required in a surgery, and also fills missing patient data based on the limited dataset available from Keck School.</h5>
+
+      <ul class="w3-text-grey"><li>The fields predicted are: Red Blood Cells, Fresh Frozen Plasma, Platelets, Cryoprecipitate and Allogenic (Yes/No).</li>
+                  <li> The missing fields filled are: Age, Duration of Surgery, SN-BM-Pre-Op INR, SN-BM-Pre-Op Platelet Count, SN-BM-PRBC Ordered, Allogeneic Blood Transfusion, SN-BM- Red Blood Cells, SN -BM- Fresh Frozen Plasma, SN-BM - Platelets, SN - BM -Cryoprecipitate, ResultsBeforeSurgery.</li>
+               </ul>
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa fa-plus-square w3-padding-64 w3-text-red"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+      <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+         <div class="w3-content">
+            <div class="w3-third w3-center">
+               <i class="fa fa-tint w3-padding-64 w3-text-red w3-margin-right"></i>
+            </div>
+            <div class="w3-twothird">
+               <h1>Blood Transfusion</h1>
+               <h5 class="w3-padding-32">".. common procedure in which blood is given to patient through an intravenous (IV) line in one of the blood vessels. Blood transfusions are done to replace blood lost during surgery or due to a serious injury."</h5>
+               <p class="w3-text-grey">Allogeneic<br>
+                  Blood products from blood bank<br><br>
+                  Autologous<br>
+                  Utilizing patients own blood<br><br>
+               </p>
+            </div>
+         </div>
+      </div>
+<!--Train-->
+      <center>
+
+
+		<div id="train" style="margin-top:140px"><br><br>
+		<div style="width: 451px ; height:290px;
+    	border: 2px solid grey; margin-top:100px">
+		<form action="train" method="post" enctype="multipart/form-data">
+      	<table>
+      	<tr><h2><div style="margin-top:30px">Upload a File to Train Model</h2></div></tr>
+      	<tr>
+        <td> <div style=" margin-right: 40px; margin-left: 40px; margin-top:30px; border: solid thin"><input type="file" name="file" style="width: 340px" required=""></div></td>
+       	</tr>
+        <tr>
+        <td><div style=" margin-right: 120px; margin-left: 120px; margin-top: 20px"><input type="checkbox" name="match" value="enabled"> Fill missing cells</td>
+        </tr>
+      	<tr>
+      	<td> <div style=" margin-right: 140px; margin-left: 140px; margin-top: 20px"> <input name="Train" style="width: 104px; height: 27px" type="submit" value="Train"> </div> </td>
+      	</tr>
+      
+	     </form>
+	     </table>
+			</div> 
+			</div>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		</center>
+		
+<!--Predict-->
+
+<!-- One or more pateints-->
+<div class="w3-row" id="predict">
+  <div class="w3-half w3-red w3-container w3-center" style="height:700px">
+    <div class="w3-padding-64">
+      <br><br><br><br><br><br><br><br><center>
+       <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><a href="#predict1" style="text-decoration: none;">For one patient</a></button>
+    </center></div>
+    
+  </div>
+  <div class="w3-half w3-white w3-container w3-center" style="height:700px">
+    <div class="w3-padding-64">
+     <br><br><br><br><br><br><br><br><center>
+      
+        <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><a href="#predict2" style="text-decoration: none;">For more patients</a></button>
+      </center>
+      
+    </div>
+  </div>
+</div>
+
+<div id="predict1" class="w3-grey w3-container" style="height:700px">
+    <div class="w3-padding-30 w3-padding-large">
+      <p>Please fill in the below details:</p>
+      <form name="form1" class="w3-container w3-card-2 w3-padding-10 w3-white" action="test2"  method="post">
+        <div class="w3-section">
+          <label>Age</label> <input class="w3-input" style="width:100%;" type="text" required name="Age">
+        </div>
+        <div class="w3-section">
+          <label>Surgery Procedure </label>
+          <select class="w3-select" style="width:100%;" type="text" required name="Surg_proc">
+          <option value=" " disabled="disabled" selected="selected">Please select the Surgery Procedure</option>
+<option value="Abdominal Mass Resection Laparoscopic">Abdominal Mass Resection Laparoscopic</option>
+<option value="Abdominal Perineal Resection">Abdominal Perineal Resection</option>
+<option value="Abdominal Perineal Resection Laparoscopi">Abdominal Perineal Resection Laparoscopi</option>
+<option value="Abdominal Sacral Colpopexy Combo">Abdominal Sacral Colpopexy Combo</option>
+<option value="Abdominal Sacral Colpopexy Combo Laparos">Abdominal Sacral Colpopexy Combo Laparos</option>
+<option value="Abdominal Sacral Colpopexy Robotic">Abdominal Sacral Colpopexy Robotic</option>
+<option value="Abdominoplasty">Abdominoplasty</option>
+<option value="Achilles Tendon Repair">Achilles Tendon Repair</option>
+<option value="Acoustic Neuroma">Acoustic Neuroma</option>
+<option value="Adrenalectomy Laparoscopic">Adrenalectomy Laparoscopic</option>
+<option value="Adrenalectomy Laparoscopic Robotic">Adrenalectomy Laparoscopic Robotic</option>
+<option value="Adrenalectomy Open">Adrenalectomy Open</option>
+<option value="Anal Condyloma Excision">Anal Condyloma Excision</option>
+<option value="Anal Fistulotomy with Seton">Anal Fistulotomy with Seton</option>
+<option value="Anal Mass Excision">Anal Mass Excision</option>
+<option value="Anal Vaginal Fistulectomy">Anal Vaginal Fistulectomy</option>
+<option value="Ankle Arthroscopy">Ankle Arthroscopy</option>
+<option value="Ankle Fusion">Ankle Fusion</option>
+<option value="Ankle Open Reduction Internal Fixation">Ankle Open Reduction Internal Fixation</option>
+<option value="Anterior and Posterior Repair">Anterior and Posterior Repair</option>
+<option value="Anterior Repair">Anterior Repair</option>
+<option value="Aorta Femoral Bypass Graft">Aorta Femoral Bypass Graft</option>
+<option value="Aorta Iliac Bypass Graft">Aorta Iliac Bypass Graft</option>
+<option value="Aortic Abdominal Aneurysm Endovascular R">Aortic Abdominal Aneurysm Endovascular R</option>
+<option value="Aortic Abdominal Aneurysm Repair">Aortic Abdominal Aneurysm Repair</option>
+<option value="Aortic and Mitral Valve Replacement">Aortic and Mitral Valve Replacement</option>
+<option value="Aortic Arch Replacement">Aortic Arch Replacement</option>
+<option value="Aortic Bifemoral Bypass Graft">Aortic Bifemoral Bypass Graft</option>
+<option value="Aortic Repair of Coarctation">Aortic Repair of Coarctation</option>
+<option value="Aortic Root Replacement">Aortic Root Replacement</option>
+<option value="Aortic Thoracic Aneurysm Ascending Minim">Aortic Thoracic Aneurysm Ascending Minim</option>
+<option value="Aortic Thoracic Aneurysm Descending">Aortic Thoracic Aneurysm Descending</option>
+<option value="Aortic Thoracic Aneurysm Descending Endo">Aortic Thoracic Aneurysm Descending Endo</option>
+<option value="Aortic Thoracic Ascending Aneurysm Repai">Aortic Thoracic Ascending Aneurysm Repai</option>
+<option value="Aortic Valve Repair vs. Replacement">Aortic Valve Repair vs. Replacement</option>
+<option value="Aortic Valve Replacement Percutaneous">Aortic Valve Replacement Percutaneous</option>
+<option value="Appendectomy Laparoscopic">Appendectomy Laparoscopic</option>
+<option value="Appendectomy Open">Appendectomy Open</option>
+<option value="Application External Fixator">Application External Fixator</option>
+<option value="Application Removal External Fixator">Application Removal External Fixator</option>
+<option value="Arm Amputation Above Elbow">Arm Amputation Above Elbow</option>
+<option value="Arm Amputation Below Elbow">Arm Amputation Below Elbow</option>
+<option value="Arm Bicep Muscle Repair">Arm Bicep Muscle Repair</option>
+<option value="Arm Excision Lesion">Arm Excision Lesion</option>
+<option value="Arm Irrigation and Debridement">Arm Irrigation and Debridement</option>
+<option value="Arm Nerve Exploration">Arm Nerve Exploration</option>
+<option value="Arm Nerve Repair">Arm Nerve Repair</option>
+<option value="Arm Osteotomy">Arm Osteotomy</option>
+<option value="Arm Removal Hardware">Arm Removal Hardware</option>
+<option value="Arterial Venous Fistula Creation/Repair">Arterial Venous Fistula Creation/Repair</option>
+<option value="Arterial Venous Thrombectomy Upper Extre">Arterial Venous Thrombectomy Upper Extre</option>
+<option value="ATI Headache Device Implant">ATI Headache Device Implant</option>
+<option value="Atrial Mass Resection">Atrial Mass Resection</option>
+<option value="Atrial Septal Defect Repair">Atrial Septal Defect Repair</option>
+<option value="Axilla Femoral Bypass Graft">Axilla Femoral Bypass Graft</option>
+<option value="Axillary Node Dissection">Axillary Node Dissection</option>
+<option value="Bilateral Inguinal Lymph Node Dissection">Bilateral Inguinal Lymph Node Dissection</option>
+<option value="Biliary Reconstruction">Biliary Reconstruction</option>
+<option value="Biopsy Lymph Node">Biopsy Lymph Node</option>
+<option value="Bladder Augmentation Cystoplasty">Bladder Augmentation Cystoplasty</option>
+<option value="Bladder Diverticulectomy">Bladder Diverticulectomy</option>
+<option value="Bladder Neck Suspension with Anterior an">Bladder Neck Suspension with Anterior an</option>
+<option value="Bladder Transurethral Resection of Tumor">Bladder Transurethral Resection of Tumor</option>
+<option value="Blepharoplasty">Blepharoplasty</option>
+<option value="Block Epidural Facet Lumbar">Block Epidural Facet Lumbar</option>
+<option value="Block Epidural Facet Thoracic">Block Epidural Facet Thoracic</option>
+<option value="Bone Anchored Hearing Aid Procedure">Bone Anchored Hearing Aid Procedure</option>
+<option value="Bone Biopsy">Bone Biopsy</option>
+<option value="Bone Biopsy Curettage Bone Graft Substit">Bone Biopsy Curettage Bone Graft Substit</option>
+<option value="Brachioplasty">Brachioplasty</option>
+<option value="Brain Battery Placement Replacement Deep">Brain Battery Placement Replacement Deep</option>
+<option value="Brain Implant Deep Brain Stimulator">Brain Implant Deep Brain Stimulator</option>
+<option value="Brain Implant Deep Brain Stimulator with">Brain Implant Deep Brain Stimulator with</option>
+<option value="Brain Ommaya Reservoir">Brain Ommaya Reservoir</option>
+<option value="Brain Shunt Ventricular Peritoneal">Brain Shunt Ventricular Peritoneal</option>
+<option value="Breast Augmentation">Breast Augmentation</option>
+<option value="Breast Augmentation Revision">Breast Augmentation Revision</option>
+<option value="Breast Biopsy">Breast Biopsy</option>
+<option value="Breast Biopsy with Needle Localization">Breast Biopsy with Needle Localization</option>
+<option value="Breast Flap Deep Inferior Epigastric Per">Breast Flap Deep Inferior Epigastric Per</option>
+<option value="Breast Reconstruction">Breast Reconstruction</option>
+<option value="Breast Reconstruction Latiss Flap">Breast Reconstruction Latiss Flap</option>
+<option value="Breast Reconstruction Revision">Breast Reconstruction Revision</option>
+<option value="Breast Reconstruction Tissue Expander">Breast Reconstruction Tissue Expander</option>
+<option value="Breast Reconstruction with Implants">Breast Reconstruction with Implants</option>
+<option value="Breast Reduction">Breast Reduction</option>
+<option value="Breast Segmental Mastectomy with Needle">Breast Segmental Mastectomy with Needle</option>
+<option value="Breast Segmental Resection">Breast Segmental Resection</option>
+<option value="Bronchoscopy Flexible">Bronchoscopy Flexible</option>
+<option value="Bronchoscopy Flexible With Biopsy And La">Bronchoscopy Flexible With Biopsy And La</option>
+<option value="Bronchoscopy Rigid">Bronchoscopy Rigid</option>
+<option value="Bronchoscopy with Thoracotomy">Bronchoscopy with Thoracotomy</option>
+<option value="Brow Lift Endoscopic">Brow Lift Endoscopic</option>
+<option value="Brow Lift Open">Brow Lift Open</option>
+<option value="Burch Urethropexy With Cystoscopy">Burch Urethropexy With Cystoscopy</option>
+<option value="Calcaneous Open Reduction Internal Fixat">Calcaneous Open Reduction Internal Fixat</option>
+<option value="Caldwell Luc Procedure">Caldwell Luc Procedure</option>
+<option value="Canaloplasty">Canaloplasty</option>
+<option value="Canthoplasty">Canthoplasty</option>
+<option value="Carotid Endarterectomy">Carotid Endarterectomy</option>
+<option value="Carotid to Brachial Artery Bypass Graft">Carotid to Brachial Artery Bypass Graft</option>
+<option value="Carpal Tunnel Release">Carpal Tunnel Release</option>
+<option value="Case Cancelled">Case Cancelled</option>
+<option value="Cataract Extraction with Intra Ocular Le">Cataract Extraction with Intra Ocular Le</option>
+<option value="Cervical Conization Cold Knife">Cervical Conization Cold Knife</option>
+<option value="Cervical Hardware Removal">Cervical Hardware Removal</option>
+<option value="Cervical Loop Electrode Excision">Cervical Loop Electrode Excision</option>
+<option value="Cervical Minimally Invasive">Cervical Minimally Invasive</option>
+<option value="Cervical Spinal Cord Stimulator Placemen">Cervical Spinal Cord Stimulator Placemen</option>
+<option value="Chest Closure">Chest Closure</option>
+<option value="Chest Pectoralis Major Muscle Repair">Chest Pectoralis Major Muscle Repair</option>
+<option value="Chest Tube Insertion">Chest Tube Insertion</option>
+<option value="Cholecystectomy Laparoscopic">Cholecystectomy Laparoscopic</option>
+<option value="Cholecystectomy Laparoscopic Robotic">Cholecystectomy Laparoscopic Robotic</option>
+<option value="Cholecystectomy Open">Cholecystectomy Open</option>
+<option value="Cholecystectomy with Cholangiogram">Cholecystectomy with Cholangiogram</option>
+<option value="Circumcision">Circumcision</option>
+<option value="Clavicle Open Reduction Internal Fixatio">Clavicle Open Reduction Internal Fixatio</option>
+<option value="Cochlear Implant">Cochlear Implant</option>
+<option value="Colectomy Partial">Colectomy Partial</option>
+<option value="Colectomy with Colostomy">Colectomy with Colostomy</option>
+<option value="Colectomy with Colostomy Laparoscopic">Colectomy with Colostomy Laparoscopic</option>
+<option value="Collateral Ligament Reconstruction">Collateral Ligament Reconstruction</option>
+<option value="Colon Resection">Colon Resection</option>
+<option value="Colon Resection Laparoscopic">Colon Resection Laparoscopic</option>
+<option value="Colon Resection Low Anterior Resection">Colon Resection Low Anterior Resection</option>
+<option value="Colon Resection Right Laparoscopic">Colon Resection Right Laparoscopic</option>
+<option value="Colon Resection Right Open">Colon Resection Right Open</option>
+<option value="Colon Resection Sigmoid">Colon Resection Sigmoid</option>
+<option value="Colonoscopy Intra-Operative">Colonoscopy Intra-Operative</option>
+<option value="Colonoscopy with Stent Placement">Colonoscopy with Stent Placement</option>
+<option value="Colostomy">Colostomy</option>
+<option value="Colostomy Closure Laparoscopic">Colostomy Closure Laparoscopic</option>
+<option value="Colostomy Closure/Hartmann Procedure">Colostomy Closure/Hartmann Procedure</option>
+<option value="Colostomy Laparoscopic">Colostomy Laparoscopic</option>
+<option value="Colostomy Revision">Colostomy Revision</option>
+<option value="Colpocleisis">Colpocleisis</option>
+<option value="Colposcopy">Colposcopy</option>
+<option value="Component Separation Repair With Mesh Bi">Component Separation Repair With Mesh Bi</option>
+<option value="Consult Wound Closure">Consult Wound Closure</option>
+<option value="Continent Cutaneous Stoma Revision">Continent Cutaneous Stoma Revision</option>
+<option value="Coronary Artery Bypass Graft">Coronary Artery Bypass Graft</option>
+<option value="Coronary Artery Bypass Graft Aortic and">Coronary Artery Bypass Graft Aortic and</option>
+<option value="Coronary Artery Bypass Graft Aortic Valv">Coronary Artery Bypass Graft Aortic Valv</option>
+<option value="Coronary Artery Bypass Graft Aortic/Mitr">Coronary Artery Bypass Graft Aortic/Mitr</option>
+<option value="Coronary Artery Bypass Graft Mitral Valv">Coronary Artery Bypass Graft Mitral Valv</option>
+<option value="Coronary Artery Bypass Graft Off Pump">Coronary Artery Bypass Graft Off Pump</option>
+<option value="Cranial Bone Graft">Cranial Bone Graft</option>
+<option value="Craniectomy">Craniectomy</option>
+<option value="Craniectomy Study For CME Implantation w">Craniectomy Study For CME Implantation w</option>
+<option value="Cranioplasty">Cranioplasty</option>
+<option value="Craniotomy Acoustic Neuroma">Craniotomy Acoustic Neuroma</option>
+<option value="Craniotomy Aneurysmectomy">Craniotomy Aneurysmectomy</option>
+<option value="Craniotomy Arterial Venous Malformation">Craniotomy Arterial Venous Malformation</option>
+<option value="Craniotomy Awake">Craniotomy Awake</option>
+<option value="Craniotomy Brain Bypath 6 Pillar">Craniotomy Brain Bypath 6 Pillar</option>
+<option value="Craniotomy Burr Holes">Craniotomy Burr Holes</option>
+<option value="Craniotomy Cortical Neurostimulator Inse">Craniotomy Cortical Neurostimulator Inse</option>
+<option value="Craniotomy Epilepsy">Craniotomy Epilepsy</option>
+<option value="Craniotomy Microvascular Decompression R">Craniotomy Microvascular Decompression R</option>
+<option value="Craniotomy Middle Fossa">Craniotomy Middle Fossa</option>
+<option value="Craniotomy Middle Fossa for Decompressio">Craniotomy Middle Fossa for Decompressio</option>
+<option value="Craniotomy Retrosigmoid Combo">Craniotomy Retrosigmoid Combo</option>
+<option value="Craniotomy Subdural Strips and Grid Plac">Craniotomy Subdural Strips and Grid Plac</option>
+<option value="Craniotomy Temporal Resection with Endol">Craniotomy Temporal Resection with Endol</option>
+<option value="Craniotomy Translabyrinthine Combo">Craniotomy Translabyrinthine Combo</option>
+<option value="Craniotomy Translabyrinthine with Abdomi">Craniotomy Translabyrinthine with Abdomi</option>
+<option value="Craniotomy Transsphenoidal">Craniotomy Transsphenoidal</option>
+<option value="Craniotomy Tumor">Craniotomy Tumor</option>
+<option value="Craniotomy with Carotid Bypass">Craniotomy with Carotid Bypass</option>
+<option value="Craniotomy with Visualase">Craniotomy with Visualase</option>
+<option value="Cryoablation of Prostate">Cryoablation of Prostate</option>
+<option value="Cystectomy Laparoscopic">Cystectomy Laparoscopic</option>
+<option value="Cystectomy Partial">Cystectomy Partial</option>
+<option value="Cystectomy with Urinary Diversion To Ure">Cystectomy with Urinary Diversion To Ure</option>
+<option value="Cystocele Repair">Cystocele Repair</option>
+<option value="Cystolitholapaxy">Cystolitholapaxy</option>
+<option value="Cystoscopy">Cystoscopy</option>
+<option value="Cystoscopy Blue Light">Cystoscopy Blue Light</option>
+<option value="Cystoscopy Diagnostic">Cystoscopy Diagnostic</option>
+<option value="Cystoscopy Transurethral Resection of Bl">Cystoscopy Transurethral Resection of Bl</option>
+<option value="Cystoscopy Ureteroscopy Laser Lithotrips">Cystoscopy Ureteroscopy Laser Lithotrips</option>
+<option value="Cystoscopy Ureteroscopy Stent Placement">Cystoscopy Ureteroscopy Stent Placement</option>
+<option value="Cystoscopy Ureteroscopy Stent Removal Re">Cystoscopy Ureteroscopy Stent Removal Re</option>
+<option value="Cystoscopy with Bladder Biopsy">Cystoscopy with Bladder Biopsy</option>
+<option value="Cystoscopy with Botox Injection">Cystoscopy with Botox Injection</option>
+<option value="Cystoscopy with Collagen Injection">Cystoscopy with Collagen Injection</option>
+<option value="Cystoscopy with Fulguration">Cystoscopy with Fulguration</option>
+<option value="Cystoscopy with Laser Lithotripsy">Cystoscopy with Laser Lithotripsy</option>
+<option value="Cystoscopy with Removal Stent">Cystoscopy with Removal Stent</option>
+<option value="Cystoscopy with Retrograde Pyelogram">Cystoscopy with Retrograde Pyelogram</option>
+<option value="Cystoscopy with Stent Placement">Cystoscopy with Stent Placement</option>
+<option value="Cystoscopy with Transurethral Resection">Cystoscopy with Transurethral Resection</option>
+<option value="Cystoscopy with Ureteroscopy">Cystoscopy with Ureteroscopy</option>
+<option value="Cystoscopy with Urolift">Cystoscopy with Urolift</option>
+<option value="Dacryocystorhinostomy">Dacryocystorhinostomy</option>
+<option value="Dacryocystorhinostomy Endoscopic">Dacryocystorhinostomy Endoscopic</option>
+<option value="Diagnostic Laparoscopy and Small Bowel R">Diagnostic Laparoscopy and Small Bowel R</option>
+<option value="Dilatation Cervix Uterine Curettage And">Dilatation Cervix Uterine Curettage And</option>
+<option value="Dilatation of Cervix and Curettage of Ut">Dilatation of Cervix and Curettage of Ut</option>
+<option value="Distal Radius Closed Reduction">Distal Radius Closed Reduction</option>
+<option value="Distal Radius Open Reduction Internal Fi">Distal Radius Open Reduction Internal Fi</option>
+<option value="Drug-Induced Sleep Endoscopy">Drug-Induced Sleep Endoscopy</option>
+<option value="Dural/Cerebrospinal Fluid Repair">Dural/Cerebrospinal Fluid Repair</option>
+<option value="Ear Exploration Middle Stapedectomy">Ear Exploration Middle Stapedectomy</option>
+<option value="Ecmo">Ecmo</option>
+<option value="Elbow Arthroscopy">Elbow Arthroscopy</option>
+<option value="Elbow Excision Olecranon Bursa">Elbow Excision Olecranon Bursa</option>
+<option value="Elbow Irrigation and Debridement">Elbow Irrigation and Debridement</option>
+<option value="Elbow Ligament Reconstruction">Elbow Ligament Reconstruction</option>
+<option value="Elbow Open Reduction Internal Fixation">Elbow Open Reduction Internal Fixation</option>
+<option value="Elbow Total Arthroplasty Primary">Elbow Total Arthroplasty Primary</option>
+<option value="Elbow Total Arthroplasty Revision">Elbow Total Arthroplasty Revision</option>
+<option value="Endobronchial Ultrasound Fine Needle Asp">Endobronchial Ultrasound Fine Needle Asp</option>
+<option value="Endorectal Advancement Flap">Endorectal Advancement Flap</option>
+<option value="Endoscopic Koch Pouch With Stone Removal">Endoscopic Koch Pouch With Stone Removal</option>
+<option value="Endoscopic Retrograde Cholangiopancreato">Endoscopic Retrograde Cholangiopancreato</option>
+<option value="Endoscopic Sinus Surgery">Endoscopic Sinus Surgery</option>
+<option value="Endoscopic Third Ventriculostomy">Endoscopic Third Ventriculostomy</option>
+<option value="Endoscopic Transphenoidal Craniotomy">Endoscopic Transphenoidal Craniotomy</option>
+<option value="Endoscopic Transsphenoidal Craniotomy wi">Endoscopic Transsphenoidal Craniotomy wi</option>
+<option value="Endovascular Thoracic Aneurysm Repair">Endovascular Thoracic Aneurysm Repair</option>
+<option value="Enterocutaneous Fistula Repair">Enterocutaneous Fistula Repair</option>
+<option value="Enteroscopy">Enteroscopy</option>
+<option value="Epiglottis Laser">Epiglottis Laser</option>
+<option value="Esophageal Cricomyotomy with or without">Esophageal Cricomyotomy with or without</option>
+<option value="Esophageal Myotomy Transthoracic">Esophageal Myotomy Transthoracic</option>
+<option value="Esophageal Ultrasound Endoscopic">Esophageal Ultrasound Endoscopic</option>
+<option value="Esophagectomy And Gastric Pullup">Esophagectomy And Gastric Pullup</option>
+<option value="Esophagectomy En Bloc Vagal Gastric Pull">Esophagectomy En Bloc Vagal Gastric Pull</option>
+<option value="Esophagectomy Laparoscopic">Esophagectomy Laparoscopic</option>
+<option value="Esophagectomy Revision Reconstruction">Esophagectomy Revision Reconstruction</option>
+<option value="Esophagectomy Thoracoscopic Laparoscopic">Esophagectomy Thoracoscopic Laparoscopic</option>
+<option value="Esophagogastroduodenoscopy and Colonosco">Esophagogastroduodenoscopy and Colonosco</option>
+<option value="Esophagogastroduodenoscopy Insertion Per">Esophagogastroduodenoscopy Insertion Per</option>
+<option value="Esophagoscopy Flexible with Dilatation w">Esophagoscopy Flexible with Dilatation w</option>
+<option value="Esophagus Transoral Stapling of Zenkers">Esophagus Transoral Stapling of Zenkers</option>
+<option value="Exam Under Anesthesia">Exam Under Anesthesia</option>
+<option value="Excision Abdominal Lesion">Excision Abdominal Lesion</option>
+<option value="Excision Exotosis">Excision Exotosis</option>
+<option value="Excision Lesion">Excision Lesion</option>
+<option value="Excision Melanoma">Excision Melanoma</option>
+<option value="Excision of Neuroma">Excision of Neuroma</option>
+<option value="Excision Soft Tissue Tumor Face Scalp">Excision Soft Tissue Tumor Face Scalp</option>
+<option value="Exploratory Laparotomy">Exploratory Laparotomy</option>
+<option value="Exploratory Laparotomy with Lysis of Adh">Exploratory Laparotomy with Lysis of Adh</option>
+<option value="Extracorporeal Shock Wave Lithotripsy">Extracorporeal Shock Wave Lithotripsy</option>
+<option value="Eye Conjunctivoplasty">Eye Conjunctivoplasty</option>
+<option value="Eye Enucleation">Eye Enucleation</option>
+<option value="Eye Lid Gold Weight Implant">Eye Lid Gold Weight Implant</option>
+<option value="Eye Repair of Laceration">Eye Repair of Laceration</option>
+<option value="Face Gracilis Free Flap with Nerve Graft">Face Gracilis Free Flap with Nerve Graft</option>
+<option value="Facial Fractures Open Reduction Internal">Facial Fractures Open Reduction Internal</option>
+<option value="Facial Nerve Transfer">Facial Nerve Transfer</option>
+<option value="Facial Sling">Facial Sling</option>
+<option value="Facial Sling with Gold Weight Placement">Facial Sling with Gold Weight Placement</option>
+<option value="Fallopian Tube Ligation Laparoscopic">Fallopian Tube Ligation Laparoscopic</option>
+<option value="Fasciectomy">Fasciectomy</option>
+<option value="Fat Reinjection">Fat Reinjection</option>
+<option value="Femoral Artery Aneurysm Repair">Femoral Artery Aneurysm Repair</option>
+<option value="Femoral Artery Endarterectomy">Femoral Artery Endarterectomy</option>
+<option value="Femoral to Femoral Artery Bypass Graft">Femoral to Femoral Artery Bypass Graft</option>
+<option value="Femoral to Popliteal Artery Bypass Graft">Femoral to Popliteal Artery Bypass Graft</option>
+<option value="Femoral to Tibial Artery Bypass Graft">Femoral to Tibial Artery Bypass Graft</option>
+<option value="Femur En Bloc Proximal Resection with Bi">Femur En Bloc Proximal Resection with Bi</option>
+<option value="Femur En Bloc Resection Distal Femur wit">Femur En Bloc Resection Distal Femur wit</option>
+<option value="Femur Endoprosthesis Distal Revision">Femur Endoprosthesis Distal Revision</option>
+<option value="Femur Endoprosthesis Proximal Revision">Femur Endoprosthesis Proximal Revision</option>
+<option value="Femur Intramedullary Nail">Femur Intramedullary Nail</option>
+<option value="Femur Open Reduction Internal Fixation">Femur Open Reduction Internal Fixation</option>
+<option value="Fibula Resection">Fibula Resection</option>
+<option value="Fibular Free Flap">Fibular Free Flap</option>
+<option value="Finger Amputation">Finger Amputation</option>
+<option value="Finger Arthroplasty">Finger Arthroplasty</option>
+<option value="Finger Irrigation and Debridement">Finger Irrigation and Debridement</option>
+<option value="Finger Open Reduction Internal Fixation">Finger Open Reduction Internal Fixation</option>
+<option value="Finger Reconstruction by Toe Transplanta">Finger Reconstruction by Toe Transplanta</option>
+<option value="Finger Trigger Release">Finger Trigger Release</option>
+<option value="First Rib Resection">First Rib Resection</option>
+<option value="Fistulotomy">Fistulotomy</option>
+<option value="Flap Local">Flap Local</option>
+<option value="Flap Rotational Advancement">Flap Rotational Advancement</option>
+<option value="Foot Irrigation and Debridement">Foot Irrigation and Debridement</option>
+<option value="Foot Open Reduction Internal Fixation">Foot Open Reduction Internal Fixation</option>
+<option value="Forehead Flap">Forehead Flap</option>
+<option value="Free Flap Transfer">Free Flap Transfer</option>
+<option value="Frontal Sinus Obliteration OsteoPlastic">Frontal Sinus Obliteration OsteoPlastic</option>
+<option value="Ganglion Cyst Excision">Ganglion Cyst Excision</option>
+<option value="Gastrectomy">Gastrectomy</option>
+<option value="Gastrectomy Laparoscopic">Gastrectomy Laparoscopic</option>
+<option value="Gastrectomy Sleeve Laparoscopic">Gastrectomy Sleeve Laparoscopic</option>
+<option value="Gastrectomy Subtotal/Partial">Gastrectomy Subtotal/Partial</option>
+<option value="Gastrectomy with Hunt Lawrence Pouch Duo">Gastrectomy with Hunt Lawrence Pouch Duo</option>
+<option value="Gastric Band and Port Removal Laparoscop">Gastric Band and Port Removal Laparoscop</option>
+<option value="Gastric Band Port Reposition/Removal">Gastric Band Port Reposition/Removal</option>
+<option value="Gastric Banding Laparoscopic">Gastric Banding Laparoscopic</option>
+<option value="Gastric Bypass Laparoscopic">Gastric Bypass Laparoscopic</option>
+<option value="Gastric Bypass with Cholecystectomy Appe">Gastric Bypass with Cholecystectomy Appe</option>
+<option value="Gastric Pacer Laparoscopic">Gastric Pacer Laparoscopic</option>
+<option value="Gastric Pacer Open">Gastric Pacer Open</option>
+<option value="Gastrostomy Tube Placement">Gastrostomy Tube Placement</option>
+<option value="Gastrostomy Tube Replacement">Gastrostomy Tube Replacement</option>
+<option value="General">General</option>
+<option value="Genioglossus Advancement">Genioglossus Advancement</option>
+<option value="Glossectomy">Glossectomy</option>
+<option value="Glossectomy Partial">Glossectomy Partial</option>
+<option value="Groin Exploration">Groin Exploration</option>
+<option value="Hand Open Reduction Internal Fixation">Hand Open Reduction Internal Fixation</option>
+<option value="Hand Replantation">Hand Replantation</option>
+<option value="Hand Tendon Repair">Hand Tendon Repair</option>
+<option value="Hand/Arm Nerve Transfer or Repair">Hand/Arm Nerve Transfer or Repair</option>
+<option value="Heart Atrial Septal Defect Repair Minima">Heart Atrial Septal Defect Repair Minima</option>
+<option value="Heart Bentall Procedure">Heart Bentall Procedure</option>
+<option value="Heart Centramag Device Placement">Heart Centramag Device Placement</option>
+<option value="Heart Endo Angiography Diagnostic">Heart Endo Angiography Diagnostic</option>
+<option value="Heart Endo Angioplasty">Heart Endo Angioplasty</option>
+<option value="Heart Endo Angioplasty Stent">Heart Endo Angioplasty Stent</option>
+<option value="Heart Foramen Ovale Repair">Heart Foramen Ovale Repair</option>
+<option value="Heart Forament Ovale Repair Minimal Inva">Heart Forament Ovale Repair Minimal Inva</option>
+<option value="Heart Maze Procedure">Heart Maze Procedure</option>
+<option value="Heart Myomectomy">Heart Myomectomy</option>
+<option value="Heart Pericardial Window">Heart Pericardial Window</option>
+<option value="Heart Transplant">Heart Transplant</option>
+<option value="Heart Ventricular Assist Device">Heart Ventricular Assist Device</option>
+<option value="Heart Ventricular Septal Defect Repair">Heart Ventricular Septal Defect Repair</option>
+<option value="Heart Ventricular Septal Defect Repair M">Heart Ventricular Septal Defect Repair M</option>
+<option value="Hemorrhoidectomy">Hemorrhoidectomy</option>
+<option value="Hemorrhoidectomy Fistulectomy">Hemorrhoidectomy Fistulectomy</option>
+<option value="Hepaticojejunostomy">Hepaticojejunostomy</option>
+<option value="Herniorraphy Ventral Hernia with Compone">Herniorraphy Ventral Hernia with Compone</option>
+<option value="Herniorrhaphy Femoral Open">Herniorrhaphy Femoral Open</option>
+<option value="Herniorrhaphy Hiatal Hernia Laparoscopic">Herniorrhaphy Hiatal Hernia Laparoscopic</option>
+<option value="Herniorrhaphy Incisional Laparoscopic">Herniorrhaphy Incisional Laparoscopic</option>
+<option value="Herniorrhaphy Incisional Open">Herniorrhaphy Incisional Open</option>
+<option value="Herniorrhaphy Inguinal Laparoscopic">Herniorrhaphy Inguinal Laparoscopic</option>
+<option value="Herniorrhaphy Inguinal Open">Herniorrhaphy Inguinal Open</option>
+<option value="Herniorrhaphy Paraesophageal Laparoscopi">Herniorrhaphy Paraesophageal Laparoscopi</option>
+<option value="Herniorrhaphy Parastomal">Herniorrhaphy Parastomal</option>
+<option value="Herniorrhaphy Spigelian Laparoscopic">Herniorrhaphy Spigelian Laparoscopic</option>
+<option value="Herniorrhaphy Umbilical Laparoscopic">Herniorrhaphy Umbilical Laparoscopic</option>
+<option value="Herniorrhaphy Umbilical Open">Herniorrhaphy Umbilical Open</option>
+<option value="Herniorrhaphy Ventral Laparoscopic">Herniorrhaphy Ventral Laparoscopic</option>
+<option value="Herniorrhaphy Ventral Open">Herniorrhaphy Ventral Open</option>
+<option value="Herniorrhaphy Ventral Repair with Abdomi">Herniorrhaphy Ventral Repair with Abdomi</option>
+<option value="High Intensity Focused Ultrasound">High Intensity Focused Ultrasound</option>
+<option value="High Intensity Focused Ultrasound with E">High Intensity Focused Ultrasound with E</option>
+<option value="High Intensity Focused Ultrasound with S">High Intensity Focused Ultrasound with S</option>
+<option value="Hip Closed Reduction">Hip Closed Reduction</option>
+<option value="Hip Core Decompression">Hip Core Decompression</option>
+<option value="Hip Disarticulation">Hip Disarticulation</option>
+<option value="Hip Hemi Arthroplasty Bipolar">Hip Hemi Arthroplasty Bipolar</option>
+<option value="Hip Irrigation and Debridement">Hip Irrigation and Debridement</option>
+<option value="Hip Open Reduction Internal Fixation wit">Hip Open Reduction Internal Fixation wit</option>
+<option value="Hip Open Reduction Internal Intertrochan">Hip Open Reduction Internal Intertrochan</option>
+<option value="Hip Total Arthroplasty">Hip Total Arthroplasty</option>
+<option value="Hip Total Arthroplasty Bilateral">Hip Total Arthroplasty Bilateral</option>
+<option value="Hip Total Arthroplasty Resection">Hip Total Arthroplasty Resection</option>
+<option value="Hip Total Arthroplasty Revision">Hip Total Arthroplasty Revision</option>
+<option value="Hip Total Arthroplasty with Acetabular R">Hip Total Arthroplasty with Acetabular R</option>
+<option value="Hip Total Irrigation and Debridement">Hip Total Irrigation and Debridement</option>
+<option value="Humerus Closed Reduction with Intramedul">Humerus Closed Reduction with Intramedul</option>
+<option value="Humerus En Bloc Resection Proximal Humer">Humerus En Bloc Resection Proximal Humer</option>
+<option value="Humerus Endoprosthesis Proximal Revision">Humerus Endoprosthesis Proximal Revision</option>
+<option value="Humerus Open Reduction Internal Fixation">Humerus Open Reduction Internal Fixation</option>
+<option value="Hydrocelectomy">Hydrocelectomy</option>
+<option value="Hyoid Suspension">Hyoid Suspension</option>
+<option value="Hysterectomy Abdominal">Hysterectomy Abdominal</option>
+<option value="Hysterectomy Abdominal Total Bilateral S">Hysterectomy Abdominal Total Bilateral S</option>
+<option value="Hysterectomy Abdominal With Bilateral Sa">Hysterectomy Abdominal With Bilateral Sa</option>
+<option value="Hysterectomy Robotic">Hysterectomy Robotic</option>
+<option value="Hysterectomy Vaginal">Hysterectomy Vaginal</option>
+<option value="Hysterectomy Vaginal Assisted Laparoscop">Hysterectomy Vaginal Assisted Laparoscop</option>
+<option value="Hysteroscopy">Hysteroscopy</option>
+<option value="Ileal Loop Revision">Ileal Loop Revision</option>
+<option value="Ileostomy Closure/Takedown">Ileostomy Closure/Takedown</option>
+<option value="Ileostomy Closure/Takedown Revision">Ileostomy Closure/Takedown Revision</option>
+<option value="Ileostomy Creation">Ileostomy Creation</option>
+<option value="Iliac Crest Bone Graft">Iliac Crest Bone Graft</option>
+<option value="Incision and Drainage">Incision and Drainage</option>
+<option value="Incision and Drainage Bartholin Cyst">Incision and Drainage Bartholin Cyst</option>
+<option value="Insertion Catheter">Insertion Catheter</option>
+<option value="Insertion Catheter Groshong">Insertion Catheter Groshong</option>
+<option value="Insertion Catheter Hickman">Insertion Catheter Hickman</option>
+<option value="Insertion Catheter Peritoneal">Insertion Catheter Peritoneal</option>
+<option value="Insertion Catheter Pleurx">Insertion Catheter Pleurx</option>
+<option value="Insertion Catheter Vascular Access Port">Insertion Catheter Vascular Access Port</option>
+<option value="Insertion Dialysis Catheter">Insertion Dialysis Catheter</option>
+<option value="Insertion of Antibiotic Beads">Insertion of Antibiotic Beads</option>
+<option value="Insertion Portacath">Insertion Portacath</option>
+<option value="Insertion Tissue Expander">Insertion Tissue Expander</option>
+<option value="Inspire UA Stimulation">Inspire UA Stimulation</option>
+<option value="Intraperitoneal Port Placement">Intraperitoneal Port Placement</option>
+<option value="Irrigation and Debridement">Irrigation and Debridement</option>
+<option value="Jejunostomy Tube Placement">Jejunostomy Tube Placement</option>
+<option value="Kidney Transplant Cadaveric Recipient">Kidney Transplant Cadaveric Recipient</option>
+<option value="Kidney Transplant Donor Laparoscopic">Kidney Transplant Donor Laparoscopic</option>
+<option value="Kidney Transplant Donor Laparoscopic Rob">Kidney Transplant Donor Laparoscopic Rob</option>
+<option value="Kidney Transplant Living Related Recipie">Kidney Transplant Living Related Recipie</option>
+<option value="Knee Arthroplasty Partial">Knee Arthroplasty Partial</option>
+<option value="Knee Arthroplasty Partial Bilateral">Knee Arthroplasty Partial Bilateral</option>
+<option value="Knee Arthroscopy">Knee Arthroscopy</option>
+<option value="Knee Arthroscopy Cultured Autologous Cho">Knee Arthroscopy Cultured Autologous Cho</option>
+<option value="Knee Arthroscopy with Anterior Cruciate">Knee Arthroscopy with Anterior Cruciate</option>
+<option value="Knee Arthroscopy with Lateral and Medial">Knee Arthroscopy with Lateral and Medial</option>
+<option value="Knee Arthroscopy with Synovectomy">Knee Arthroscopy with Synovectomy</option>
+<option value="Knee Arthrotomy">Knee Arthrotomy</option>
+<option value="Knee Closed Manipulation">Knee Closed Manipulation</option>
+<option value="Knee Irrigation and Debridement">Knee Irrigation and Debridement</option>
+<option value="Knee Total Arthroplasty">Knee Total Arthroplasty</option>
+<option value="Knee Total Arthroplasty Bilateral">Knee Total Arthroplasty Bilateral</option>
+<option value="Knee Total Arthroplasty Irrigation and D">Knee Total Arthroplasty Irrigation and D</option>
+<option value="Knee Total Arthroplasty Resection">Knee Total Arthroplasty Resection</option>
+<option value="Knee Total Arthroplasty Revision">Knee Total Arthroplasty Revision</option>
+<option value="Koch Pouch Revision">Koch Pouch Revision</option>
+<option value="Kyphoplasty">Kyphoplasty</option>
+<option value="Lacrimal Duct Probing">Lacrimal Duct Probing</option>
+<option value="Laminectomy Anterior and Posterior Lumba">Laminectomy Anterior and Posterior Lumba</option>
+<option value="Laminectomy Anterior Cervical 1 level">Laminectomy Anterior Cervical 1 level</option>
+<option value="Laminectomy Anterior Cervical 2 level">Laminectomy Anterior Cervical 2 level</option>
+<option value="Laminectomy Anterior Cervical 3 or more">Laminectomy Anterior Cervical 3 or more</option>
+<option value="Laminectomy Anterior Lumbar Interbody Fu">Laminectomy Anterior Lumbar Interbody Fu</option>
+<option value="Laminectomy Cervical Anterior Discectomy">Laminectomy Cervical Anterior Discectomy</option>
+<option value="Laminectomy Cervical Anterior Posterior">Laminectomy Cervical Anterior Posterior</option>
+<option value="Laminectomy Cervical Corpectomy 1 Level">Laminectomy Cervical Corpectomy 1 Level</option>
+<option value="Laminectomy Cervical Corpectomy 2 Level">Laminectomy Cervical Corpectomy 2 Level</option>
+<option value="Laminectomy Cervical Corpectomy 3 Level">Laminectomy Cervical Corpectomy 3 Level</option>
+<option value="Laminectomy Lumbar Corpectomy and Fusion">Laminectomy Lumbar Corpectomy and Fusion</option>
+<option value="Laminectomy Microdiscectomy Lumbar 1 or">Laminectomy Microdiscectomy Lumbar 1 or</option>
+<option value="Laminectomy Microdiscectomy Lumbar 3 or">Laminectomy Microdiscectomy Lumbar 3 or</option>
+<option value="Laminectomy Microdiscectomy Lumbar 5 or">Laminectomy Microdiscectomy Lumbar 5 or</option>
+<option value="Laminectomy Posterior Cervical 1 level">Laminectomy Posterior Cervical 1 level</option>
+<option value="Laminectomy Posterior Cervical 2 level">Laminectomy Posterior Cervical 2 level</option>
+<option value="Laminectomy Posterior Cervical 3 or more">Laminectomy Posterior Cervical 3 or more</option>
+<option value="Laminectomy Posterior Fusion Minimally I">Laminectomy Posterior Fusion Minimally I</option>
+<option value="Laminectomy Posterior Lumbar Interbody F">Laminectomy Posterior Lumbar Interbody F</option>
+<option value="Laminectomy Posterior Lumbar Thoracic 1">Laminectomy Posterior Lumbar Thoracic 1</option>
+<option value="Laminectomy Posterior Lumbar Thoracic 3">Laminectomy Posterior Lumbar Thoracic 3</option>
+<option value="Laminectomy Posterior Lumbar Thoracic 4">Laminectomy Posterior Lumbar Thoracic 4</option>
+<option value="Laparoscopic Abdominal Perineal Resectio">Laparoscopic Abdominal Perineal Resectio</option>
+<option value="Laparoscopic Gastrectomy with Roux-en-y,">Laparoscopic Gastrectomy with Roux-en-y,</option>
+<option value="Laparoscopic Gastrostomy Tube Placement">Laparoscopic Gastrostomy Tube Placement</option>
+<option value="Laparoscopic LINX vs. Nissen Fundoplicat">Laparoscopic LINX vs. Nissen Fundoplicat</option>
+<option value="Laparoscopic Rectopexy">Laparoscopic Rectopexy</option>
+<option value="Laparoscopic Small Bowel Resection">Laparoscopic Small Bowel Resection</option>
+<option value="Laparoscopic vs. Open Small Bowel Resect">Laparoscopic vs. Open Small Bowel Resect</option>
+<option value="Laparoscopic Whipple Procedure">Laparoscopic Whipple Procedure</option>
+<option value="Laparoscopy Diagnostic">Laparoscopy Diagnostic</option>
+<option value="Laryngectomy">Laryngectomy</option>
+<option value="Laryngectomy with Pharyngectomy">Laryngectomy with Pharyngectomy</option>
+<option value="Laryngoplasty">Laryngoplasty</option>
+<option value="Laryngoscopy Direct Bronchoscopy Esophag">Laryngoscopy Direct Bronchoscopy Esophag</option>
+<option value="Larynx Voice Prosthesis Insertion">Larynx Voice Prosthesis Insertion</option>
+<option value="Larynx Voice Prosthesis Revision">Larynx Voice Prosthesis Revision</option>
+<option value="Leg Amputation Above Knee">Leg Amputation Above Knee</option>
+<option value="Leg Amputation Below Knee">Leg Amputation Below Knee</option>
+<option value="Leg Irrigation and Debridement">Leg Irrigation and Debridement</option>
+<option value="Leg Nerve Repair">Leg Nerve Repair</option>
+<option value="Leg Quadriceps Muscle Biopsy">Leg Quadriceps Muscle Biopsy</option>
+<option value="Lingual Tonsillectomy">Lingual Tonsillectomy</option>
+<option value="Lipectomy Suction">Lipectomy Suction</option>
+<option value="Liver Resection">Liver Resection</option>
+<option value="Liver Resection Laparoscopic">Liver Resection Laparoscopic</option>
+<option value="Liver Transplant Cadaveric Recipient">Liver Transplant Cadaveric Recipient</option>
+<option value="Liver Transplant Donor">Liver Transplant Donor</option>
+<option value="Liver Transplant Recipient">Liver Transplant Recipient</option>
+<option value="Low Anterior Resection Laparoscopic">Low Anterior Resection Laparoscopic</option>
+<option value="Lumbar Extreme Lateral Interbody Fusion">Lumbar Extreme Lateral Interbody Fusion</option>
+<option value="Lumboperitoneal Shunt Insertion">Lumboperitoneal Shunt Insertion</option>
+<option value="Lung Transplant Cadaveric Bilateral">Lung Transplant Cadaveric Bilateral</option>
+<option value="Lung Transplant Cadaveric Single">Lung Transplant Cadaveric Single</option>
+<option value="Lymph Node Dissection">Lymph Node Dissection</option>
+<option value="Mandible Retromolar Trigone Resection">Mandible Retromolar Trigone Resection</option>
+<option value="Mandibular Facial Fracture Repair">Mandibular Facial Fracture Repair</option>
+<option value="Mass Resection Abdominal">Mass Resection Abdominal</option>
+<option value="Mastectomy">Mastectomy</option>
+<option value="Mastectomy Modified Radical Unilateral">Mastectomy Modified Radical Unilateral</option>
+<option value="Mastoidectomy">Mastoidectomy</option>
+<option value="Mastopexy">Mastopexy</option>
+<option value="Maxillary Bilateral Sagittal Split Osteo">Maxillary Bilateral Sagittal Split Osteo</option>
+<option value="Maxillectomy">Maxillectomy</option>
+<option value="Mediastinoscopy">Mediastinoscopy</option>
+<option value="Mediastinoscopy Lymph Node Biopsy">Mediastinoscopy Lymph Node Biopsy</option>
+<option value="Mediastinoscopy with Bronchoscopy">Mediastinoscopy with Bronchoscopy</option>
+<option value="Medtronic Pump Dorsal Column Stimulator">Medtronic Pump Dorsal Column Stimulator</option>
+<option value="Microlymphatic Procedure">Microlymphatic Procedure</option>
+<option value="Minimally Invasive Aortic Valve Repair v">Minimally Invasive Aortic Valve Repair v</option>
+<option value="Minimally Invasive Lumbar Laminectomy an">Minimally Invasive Lumbar Laminectomy an</option>
+<option value="Minimally Invasive Mitral Valve Repair v">Minimally Invasive Mitral Valve Repair v</option>
+<option value="Mitral Clip">Mitral Clip</option>
+<option value="Mitral Valve Repair Percutaneous">Mitral Valve Repair Percutaneous</option>
+<option value="Mitral Valve Repair vs. Replacement">Mitral Valve Repair vs. Replacement</option>
+<option value="Modified Radical Neck">Modified Radical Neck</option>
+<option value="Mouth Excision Submandibular Gland">Mouth Excision Submandibular Gland</option>
+<option value="Mouth Excision Thyroglossal Cyst">Mouth Excision Thyroglossal Cyst</option>
+<option value="Mouth Extraction Teeth">Mouth Extraction Teeth</option>
+<option value="Mouth Le Fort I Osteotomy">Mouth Le Fort I Osteotomy</option>
+<option value="Mouth Lip Reconstruction">Mouth Lip Reconstruction</option>
+<option value="Mouth Lip Reconstruction with Skin Graft">Mouth Lip Reconstruction with Skin Graft</option>
+<option value="Mouth Palatectomy Partial">Mouth Palatectomy Partial</option>
+<option value="Mouth Uvulopalatopharyngoplasty">Mouth Uvulopalatopharyngoplasty</option>
+<option value="Myringotomy with Tube">Myringotomy with Tube</option>
+<option value="Nasal Fracture Closed Reduction">Nasal Fracture Closed Reduction</option>
+<option value="Nasal Septoplasty with Functional Endosc">Nasal Septoplasty with Functional Endosc</option>
+<option value="Nasal Septoplasty with Rhinoplasty Nasal">Nasal Septoplasty with Rhinoplasty Nasal</option>
+<option value="Nasopharyngectomy">Nasopharyngectomy</option>
+<option value="Neck Excision Mass">Neck Excision Mass</option>
+<option value="Neobladder with Pelvic Lymph Node Dissec">Neobladder with Pelvic Lymph Node Dissec</option>
+<option value="Nephrectomy Laparoscopic">Nephrectomy Laparoscopic</option>
+<option value="Nephrectomy Laparoscopic Robotic">Nephrectomy Laparoscopic Robotic</option>
+<option value="Nephrectomy Partial">Nephrectomy Partial</option>
+<option value="Nephrectomy Radical">Nephrectomy Radical</option>
+<option value="Nephrectomy Radical Thoracoabominal Lymp">Nephrectomy Radical Thoracoabominal Lymp</option>
+<option value="Nephrectomy Simple">Nephrectomy Simple</option>
+<option value="Nephrolithotomy Percutaneous">Nephrolithotomy Percutaneous</option>
+<option value="Nephroureterectomy Laparoscopic">Nephroureterectomy Laparoscopic</option>
+<option value="Nerve Exploration">Nerve Exploration</option>
+<option value="Nipple Reconstruction">Nipple Reconstruction</option>
+<option value="Nissen Fundoplication Transabdominal">Nissen Fundoplication Transabdominal</option>
+<option value="Nissen Toupet Dor Fundoplication Laparos">Nissen Toupet Dor Fundoplication Laparos</option>
+<option value="Occipital Nerve Stimulator Placement">Occipital Nerve Stimulator Placement</option>
+<option value="Open Reduction Internal Fixation">Open Reduction Internal Fixation</option>
+<option value="Open Reduction Internal Fixation Talus">Open Reduction Internal Fixation Talus</option>
+<option value="Open Reduction Internal Reduction Pilon">Open Reduction Internal Reduction Pilon</option>
+<option value="Orbital Decompression">Orbital Decompression</option>
+<option value="Orbital Repair of Blowout Fracture">Orbital Repair of Blowout Fracture</option>
+<option value="Orbital Repair with Bone Flap">Orbital Repair with Bone Flap</option>
+<option value="Orbitotomy Anterior">Orbitotomy Anterior</option>
+<option value="Orchiectomy Scrotal">Orchiectomy Scrotal</option>
+<option value="Orchiectomy Scrotal and Testicular Prost">Orchiectomy Scrotal and Testicular Prost</option>
+<option value="Organ Procurement">Organ Procurement</option>
+<option value="Other Radiology Procedure">Other Radiology Procedure</option>
+<option value="Ovarian Cystectomy">Ovarian Cystectomy</option>
+<option value="Ovarian Cystectomy Laparoscopic">Ovarian Cystectomy Laparoscopic</option>
+<option value="Ovarian Cystectomy Robotic">Ovarian Cystectomy Robotic</option>
+<option value="Pacemaker Generator Removal">Pacemaker Generator Removal</option>
+<option value="Pacemaker Generator Replacement">Pacemaker Generator Replacement</option>
+<option value="Pacemaker Insertion Permanent">Pacemaker Insertion Permanent</option>
+<option value="Pacemaker Insertion Temporary">Pacemaker Insertion Temporary</option>
+<option value="Pacemaker Lead Revision">Pacemaker Lead Revision</option>
+<option value="Palate Surgery">Palate Surgery</option>
+<option value="Pancreas Transplant Cadaveric">Pancreas Transplant Cadaveric</option>
+<option value="Pancreatectomy">Pancreatectomy</option>
+<option value="Pancreatectomy Laparoscopic">Pancreatectomy Laparoscopic</option>
+<option value="Panendoscopy">Panendoscopy</option>
+<option value="Panniculectomy">Panniculectomy</option>
+<option value="Paraesophageal / Hiatal Hernia Repair wi">Paraesophageal / Hiatal Hernia Repair wi</option>
+<option value="Parathyroidectomy">Parathyroidectomy</option>
+<option value="Parathyroidectomy Minimally Invasive">Parathyroidectomy Minimally Invasive</option>
+<option value="Parotidectomy">Parotidectomy</option>
+<option value="Parotidectomy with Cervicofacial Advance">Parotidectomy with Cervicofacial Advance</option>
+<option value="Parotidectomy With Claviculo Rotational">Parotidectomy With Claviculo Rotational</option>
+<option value="Pelvectomy Hemi">Pelvectomy Hemi</option>
+<option value="Pelvic Exenteration">Pelvic Exenteration</option>
+<option value="Pelvic Exenteration with Ileal Conduit">Pelvic Exenteration with Ileal Conduit</option>
+<option value="Pelvic Exenteration with Neobladder">Pelvic Exenteration with Neobladder</option>
+<option value="Pelvic Exploration">Pelvic Exploration</option>
+<option value="Pelvic Open Reduction Internal Fixation">Pelvic Open Reduction Internal Fixation</option>
+<option value="Penectomy">Penectomy</option>
+<option value="Penectomy Partial">Penectomy Partial</option>
+<option value="Penile Biopsy">Penile Biopsy</option>
+<option value="Penile Curvature Repair with Temporalis">Penile Curvature Repair with Temporalis</option>
+<option value="Penile Prosthesis Implant Inflatable">Penile Prosthesis Implant Inflatable</option>
+<option value="Penile Prosthesis Implant Revision">Penile Prosthesis Implant Revision</option>
+<option value="Penile Reconstruction">Penile Reconstruction</option>
+<option value="Percutaneous Endoscopy of Koch Pouch Sto">Percutaneous Endoscopy of Koch Pouch Sto</option>
+<option value="Percutaneous Mitral Valve Closure">Percutaneous Mitral Valve Closure</option>
+<option value="Pericardectomy">Pericardectomy</option>
+<option value="Perirectal Abscess Incision and Drainage">Perirectal Abscess Incision and Drainage</option>
+<option value="Peritoneal Dialysis Catheter Laparoscopi">Peritoneal Dialysis Catheter Laparoscopi</option>
+<option value="Peroral Endoscopic Myotomy">Peroral Endoscopic Myotomy</option>
+<option value="Pharyngectomy">Pharyngectomy</option>
+<option value="Pharyngectomy Partial">Pharyngectomy Partial</option>
+<option value="Pharyngectomy Partial Robotic">Pharyngectomy Partial Robotic</option>
+<option value="Pharyngoplasty">Pharyngoplasty</option>
+<option value="Photoretinal Coagulation with Laser">Photoretinal Coagulation with Laser</option>
+<option value="Pilonidal Cystectomy">Pilonidal Cystectomy</option>
+<option value="Platinum Weight and Canthopexy">Platinum Weight and Canthopexy</option>
+<option value="Polypectomy">Polypectomy</option>
+<option value="Popliteal Aneurysm Artery/Vein Repair">Popliteal Aneurysm Artery/Vein Repair</option>
+<option value="Popliteal To Anterior Tibial Artery Bypa">Popliteal To Anterior Tibial Artery Bypa</option>
+<option value="Posterior Repair">Posterior Repair</option>
+<option value="Posterior Spinal Instrumentation Removal">Posterior Spinal Instrumentation Removal</option>
+<option value="Pouch Procedure">Pouch Procedure</option>
+<option value="Proctocolectomy Ileoanal Anastomosis">Proctocolectomy Ileoanal Anastomosis</option>
+<option value="Prostate Laser Enucleation">Prostate Laser Enucleation</option>
+<option value="Prostate Transrectal Ultrasound Placemen">Prostate Transrectal Ultrasound Placemen</option>
+<option value="Prostatectomy Laparoscopic">Prostatectomy Laparoscopic</option>
+<option value="Prostatectomy Laparoscopic Robotic">Prostatectomy Laparoscopic Robotic</option>
+<option value="Prostatectomy Radical">Prostatectomy Radical</option>
+<option value="Prostatectomy Radical Retopubic">Prostatectomy Radical Retopubic</option>
+<option value="Prostatectomy Radical with Lymph Node Di">Prostatectomy Radical with Lymph Node Di</option>
+<option value="Prostatectomy Suprapubic">Prostatectomy Suprapubic</option>
+<option value="Prostatectomy Transurethral Resection">Prostatectomy Transurethral Resection</option>
+<option value="Ptosis Repair">Ptosis Repair</option>
+<option value="Pulmonary Valve Repair vs. Replacement">Pulmonary Valve Repair vs. Replacement</option>
+<option value="Pyeloplasty Laparoscopic">Pyeloplasty Laparoscopic</option>
+<option value="Pyeloplasty Laparoscopic Robotic">Pyeloplasty Laparoscopic Robotic</option>
+<option value="Pyloroplasty">Pyloroplasty</option>
+<option value="Radical Neck Dissection">Radical Neck Dissection</option>
+<option value="Radical Neck Dissection Tracheostomy Man">Radical Neck Dissection Tracheostomy Man</option>
+<option value="Radio Frequency Ablation">Radio Frequency Ablation</option>
+<option value="Rectal Artificial Bowel Sphincter">Rectal Artificial Bowel Sphincter</option>
+<option value="Rectal Prolapse Repair">Rectal Prolapse Repair</option>
+<option value="Rectal Vaginal Fistula Repair">Rectal Vaginal Fistula Repair</option>
+<option value="Rectocele Repair">Rectocele Repair</option>
+<option value="Rectopexy">Rectopexy</option>
+<option value="Removal Hardware">Removal Hardware</option>
+<option value="Renal Artery Aneurysm Repair">Renal Artery Aneurysm Repair</option>
+<option value="Renal Artery Bypass">Renal Artery Bypass</option>
+<option value="Renal Mesenteric Celiac Artery Bypass">Renal Mesenteric Celiac Artery Bypass</option>
+<option value="Repair Pseudoaneurysm">Repair Pseudoaneurysm</option>
+<option value="Retroperitoneal Lympn Node Dissection Re">Retroperitoneal Lympn Node Dissection Re</option>
+<option value="Revision Scar">Revision Scar</option>
+<option value="Rhinoplasty">Rhinoplasty</option>
+<option value="Rhytidectomy">Rhytidectomy</option>
+<option value="Robotic Abdominal Mass Resection">Robotic Abdominal Mass Resection</option>
+<option value="Robotic Abdominal Perineal Resection Lap">Robotic Abdominal Perineal Resection Lap</option>
+<option value="Robotic Angiogram/Angioplasty Percutaneo">Robotic Angiogram/Angioplasty Percutaneo</option>
+<option value="Robotic Aortic Abdominal Aneurysm Endova">Robotic Aortic Abdominal Aneurysm Endova</option>
+<option value="Robotic Colon Resection Laparoscopic">Robotic Colon Resection Laparoscopic</option>
+<option value="Robotic Cystecotmy with Orthotopic Neobl">Robotic Cystecotmy with Orthotopic Neobl</option>
+<option value="Robotic Cystectomy Laparoscopic">Robotic Cystectomy Laparoscopic</option>
+<option value="Robotic Diverticulectomy">Robotic Diverticulectomy</option>
+<option value="Robotic Esophagectomy">Robotic Esophagectomy</option>
+<option value="Robotic Exenteration Ileal Conduit Urina">Robotic Exenteration Ileal Conduit Urina</option>
+<option value="Robotic Gastrectomy, Roux-en-y and Esoph">Robotic Gastrectomy, Roux-en-y and Esoph</option>
+<option value="Robotic Herniorrhaphy Incisional">Robotic Herniorrhaphy Incisional</option>
+<option value="Robotic Herniorrhaphy Inguinal">Robotic Herniorrhaphy Inguinal</option>
+<option value="Robotic Hysterectomy Single Site">Robotic Hysterectomy Single Site</option>
+<option value="Robotic Kidney Transplant Donor Nephrect">Robotic Kidney Transplant Donor Nephrect</option>
+<option value="Robotic Liver Resection">Robotic Liver Resection</option>
+<option value="Robotic Low Anterior Resection Laparosco">Robotic Low Anterior Resection Laparosco</option>
+<option value="Robotic Nephrectomy">Robotic Nephrectomy</option>
+<option value="Robotic Nephroureterectomy">Robotic Nephroureterectomy</option>
+<option value="Robotic Nephroureterectomy Lymph Node Di">Robotic Nephroureterectomy Lymph Node Di</option>
+<option value="Robotic Nephroureterectomy with or witho">Robotic Nephroureterectomy with or witho</option>
+<option value="Robotic Nissen Fundoplication">Robotic Nissen Fundoplication</option>
+<option value="Robotic Pancreatectomy and Splenectomy">Robotic Pancreatectomy and Splenectomy</option>
+<option value="Robotic Partial Nephrectomy">Robotic Partial Nephrectomy</option>
+<option value="Robotic Partial Nephrectomy Cystoscopy U">Robotic Partial Nephrectomy Cystoscopy U</option>
+<option value="Robotic Partial Nephrectomy via Retoperi">Robotic Partial Nephrectomy via Retoperi</option>
+<option value="Robotic Partial Nephrectomy via Retroper">Robotic Partial Nephrectomy via Retroper</option>
+<option value="Robotic Partial vs. Radical Nephrectomy">Robotic Partial vs. Radical Nephrectomy</option>
+<option value="Robotic Pyeloplasty Cystoscopy Ureteral">Robotic Pyeloplasty Cystoscopy Ureteral</option>
+<option value="Robotic Radical Cystectomy Ileal Conduit">Robotic Radical Cystectomy Ileal Conduit</option>
+<option value="Robotic Radical Cystectomy Neobladder">Robotic Radical Cystectomy Neobladder</option>
+<option value="Robotic Radical Cystectomy Orthotopic Ne">Robotic Radical Cystectomy Orthotopic Ne</option>
+<option value="Robotic Radical Cystoprostatectomy Pelvi">Robotic Radical Cystoprostatectomy Pelvi</option>
+<option value="Robotic Radical Cystoprostatectomy, Pelv">Robotic Radical Cystoprostatectomy, Pelv</option>
+<option value="Robotic Radical Nephrectomy">Robotic Radical Nephrectomy</option>
+<option value="Robotic Radical Nephrectomy Lymph Node D">Robotic Radical Nephrectomy Lymph Node D</option>
+<option value="Robotic Radical Nephrectomy Renal Vein T">Robotic Radical Nephrectomy Renal Vein T</option>
+<option value="Robotic Radical Prostatectomy">Robotic Radical Prostatectomy</option>
+<option value="Robotic Radical Prostatectomy Pelvic Lym">Robotic Radical Prostatectomy Pelvic Lym</option>
+<option value="Robotic Radical Retropubic Prostatectomy">Robotic Radical Retropubic Prostatectomy</option>
+<option value="Robotic Rectopexy">Robotic Rectopexy</option>
+<option value="Robotic Simple Nephrectomy">Robotic Simple Nephrectomy</option>
+<option value="Robotic Simple Prostatectomy">Robotic Simple Prostatectomy</option>
+<option value="Robotic Sleeve Gastrectomy">Robotic Sleeve Gastrectomy</option>
+<option value="Robotic Ureteral Reimplantation">Robotic Ureteral Reimplantation</option>
+<option value="Robotic Ureteral Reimplantation with Pso">Robotic Ureteral Reimplantation with Pso</option>
+<option value="Ross Procedure">Ross Procedure</option>
+<option value="Sacrectomy">Sacrectomy</option>
+<option value="Salpingectomy Laparoscopic">Salpingectomy Laparoscopic</option>
+<option value="Salpingo Oophorectomy Laparoscopic">Salpingo Oophorectomy Laparoscopic</option>
+<option value="Salpingo Oophorectomy Open">Salpingo Oophorectomy Open</option>
+<option value="Sarcoma Resection Extremity">Sarcoma Resection Extremity</option>
+<option value="Sarcoma Resection Retroperitoneal">Sarcoma Resection Retroperitoneal</option>
+<option value="Scapula En Bloc Resection With Reconstru">Scapula En Bloc Resection With Reconstru</option>
+<option value="Scapulectomy">Scapulectomy</option>
+<option value="Sentinel Node Biopsy Procedure">Sentinel Node Biopsy Procedure</option>
+<option value="Septoplasty Rhinoplasty">Septoplasty Rhinoplasty</option>
+<option value="Shoulder Arthroscopy">Shoulder Arthroscopy</option>
+<option value="Shoulder Arthroscopy Bankhart Acromiopla">Shoulder Arthroscopy Bankhart Acromiopla</option>
+<option value="Shoulder Arthroscopy with Bicep Tenodesi">Shoulder Arthroscopy with Bicep Tenodesi</option>
+<option value="Shoulder Arthroscopy with Latissimus Tra">Shoulder Arthroscopy with Latissimus Tra</option>
+<option value="Shoulder Arthroscopy with Open Bristow L">Shoulder Arthroscopy with Open Bristow L</option>
+<option value="Shoulder Arthroscopy with Rotator Cuff R">Shoulder Arthroscopy with Rotator Cuff R</option>
+<option value="Shoulder Closed Reduction">Shoulder Closed Reduction</option>
+<option value="Shoulder Irrigation and Debridement">Shoulder Irrigation and Debridement</option>
+<option value="Shoulder Manipulation">Shoulder Manipulation</option>
+<option value="Shoulder Open Acromioclavicular Joint Re">Shoulder Open Acromioclavicular Joint Re</option>
+<option value="Shoulder Open Procedure">Shoulder Open Procedure</option>
+<option value="Shoulder Open Reduction Internal Fixatio">Shoulder Open Reduction Internal Fixatio</option>
+<option value="Shoulder Total Arthroplasty">Shoulder Total Arthroplasty</option>
+<option value="Shoulder Total Arthroplasty Revision">Shoulder Total Arthroplasty Revision</option>
+<option value="Shoulder Total Hemiarthroplasty">Shoulder Total Hemiarthroplasty</option>
+<option value="Shoulder Total with Reverse Delta Prosth">Shoulder Total with Reverse Delta Prosth</option>
+<option value="Sigmoidoscopy Anoscopy">Sigmoidoscopy Anoscopy</option>
+<option value="Sinus Surgery">Sinus Surgery</option>
+<option value="Skin Graft">Skin Graft</option>
+<option value="Skin Graft Split Thickness">Skin Graft Split Thickness</option>
+<option value="Skull Irrigation Debridement Washout">Skull Irrigation Debridement Washout</option>
+<option value="Small Bowel ReAnastomosis">Small Bowel ReAnastomosis</option>
+<option value="Small Bowel Resection">Small Bowel Resection</option>
+<option value="Soft Tissue Biopsy">Soft Tissue Biopsy</option>
+<option value="Soft Tissue Biopsy with Wide Excision">Soft Tissue Biopsy with Wide Excision</option>
+<option value="Soft Tissue Cryoablation Resection Excis">Soft Tissue Cryoablation Resection Excis</option>
+<option value="Soft Tissue En Bloc Resection">Soft Tissue En Bloc Resection</option>
+<option value="Space OAR Injection">Space OAR Injection</option>
+<option value="Sphincterectomy">Sphincterectomy</option>
+<option value="Sphincteroplasty Anoplasty Thiersch Proc">Sphincteroplasty Anoplasty Thiersch Proc</option>
+<option value="Spinal Cord Stimulator Removal">Spinal Cord Stimulator Removal</option>
+<option value="Spinal Irrigation and Debridement">Spinal Irrigation and Debridement</option>
+<option value="Spine Exposure">Spine Exposure</option>
+<option value="Spine Minimally Invasive Direct Lateral">Spine Minimally Invasive Direct Lateral</option>
+<option value="Spine Minimally Invasive Transforaminal">Spine Minimally Invasive Transforaminal</option>
+<option value="Spleenectomy Laparoscopic">Spleenectomy Laparoscopic</option>
+<option value="Spleenectomy Open">Spleenectomy Open</option>
+<option value="Sternoclavilar Reconstruction">Sternoclavilar Reconstruction</option>
+<option value="Sternotomy">Sternotomy</option>
+<option value="Stimulator Placement">Stimulator Placement</option>
+<option value="Stomaplasty">Stomaplasty</option>
+<option value="Strut Adjusted Volume Implant">Strut Adjusted Volume Implant</option>
+<option value="Subclavian Carotid Artery Bypass Graft">Subclavian Carotid Artery Bypass Graft</option>
+<option value="Subclavian Carotid Artery Transposition">Subclavian Carotid Artery Transposition</option>
+<option value="Subtotal Thyroid Lobectomy">Subtotal Thyroid Lobectomy</option>
+<option value="Suprapubic Cystostomy Tube Placement">Suprapubic Cystostomy Tube Placement</option>
+<option value="Synovectomy">Synovectomy</option>
+<option value="Tendon Repair">Tendon Repair</option>
+<option value="Tendon Transfer">Tendon Transfer</option>
+<option value="Testicular Prosthesis Placement">Testicular Prosthesis Placement</option>
+<option value="Thoracoabdominal Retroperitoneal Lymph N">Thoracoabdominal Retroperitoneal Lymph N</option>
+<option value="Thoracoscopic Robotic Assisted Lung Rese">Thoracoscopic Robotic Assisted Lung Rese</option>
+<option value="Thoracoscopic Sympathectomy">Thoracoscopic Sympathectomy</option>
+<option value="Thoracoscopy">Thoracoscopy</option>
+<option value="Thoracoscopy with Pleurodesis">Thoracoscopy with Pleurodesis</option>
+<option value="Thoracoscopy with possible Thoracotomy">Thoracoscopy with possible Thoracotomy</option>
+<option value="Thoracotomy">Thoracotomy</option>
+<option value="Thoracotomy with Pneumonectomy">Thoracotomy with Pneumonectomy</option>
+<option value="Thoracotomy with Rib Resection">Thoracotomy with Rib Resection</option>
+<option value="Thumb Trapezectomy">Thumb Trapezectomy</option>
+<option value="Thymectomy">Thymectomy</option>
+<option value="Thymectomy Robotic">Thymectomy Robotic</option>
+<option value="Thyroidectomy">Thyroidectomy</option>
+<option value="Thyroidectomy With Node Dissection">Thyroidectomy With Node Dissection</option>
+<option value="Thyroidectomy with Parathyroidectomy">Thyroidectomy with Parathyroidectomy</option>
+<option value="Thyroplasty">Thyroplasty</option>
+<option value="Tibia En Bloc Resec Proximal with Endopr">Tibia En Bloc Resec Proximal with Endopr</option>
+<option value="Tibia Endoprosthesis Proximal Revision">Tibia Endoprosthesis Proximal Revision</option>
+<option value="Tibia Intramedullary Nail">Tibia Intramedullary Nail</option>
+<option value="Tibia Irrigation and Debridement">Tibia Irrigation and Debridement</option>
+<option value="Tibial Plateau Open Reduction Internal F">Tibial Plateau Open Reduction Internal F</option>
+<option value="Toe Hallux Interphalangeal Fusion">Toe Hallux Interphalangeal Fusion</option>
+<option value="Toe/Metatarsal Amputation">Toe/Metatarsal Amputation</option>
+<option value="Tongue Radiofrequency">Tongue Radiofrequency</option>
+<option value="Tonsillectomy">Tonsillectomy</option>
+<option value="Total Parotidectomy with Sternocleidomas">Total Parotidectomy with Sternocleidomas</option>
+<option value="Tracheal Puncture Placement">Tracheal Puncture Placement</option>
+<option value="Tracheal Resection">Tracheal Resection</option>
+<option value="Tracheostomy Tube Insertion">Tracheostomy Tube Insertion</option>
+<option value="Transabdominal Repair of Paraesophageal">Transabdominal Repair of Paraesophageal</option>
+<option value="Transanal Microscopic Excision">Transanal Microscopic Excision</option>
+<option value="Transesophageal Echocardiogram">Transesophageal Echocardiogram</option>
+<option value="Transoral Robotic Surgery">Transoral Robotic Surgery</option>
+<option value="Transthoracic Diverticulectomy with or w">Transthoracic Diverticulectomy with or w</option>
+<option value="Transvaginal Taping">Transvaginal Taping</option>
+<option value="Transvagingal Taping with Cystoscopy">Transvagingal Taping with Cystoscopy</option>
+<option value="Tricuspid Valve Repair vs. Replacement">Tricuspid Valve Repair vs. Replacement</option>
+<option value="Tumor Reductive Surgery">Tumor Reductive Surgery</option>
+<option value="Turbinate Radiofrequency">Turbinate Radiofrequency</option>
+<option value="Tympanoplasty">Tympanoplasty</option>
+<option value="Tympanoplasty Canaloplasty Ossicular Rec">Tympanoplasty Canaloplasty Ossicular Rec</option>
+<option value="Ulnar Nerve Repair">Ulnar Nerve Repair</option>
+<option value="Ulnar Nerve Transposition">Ulnar Nerve Transposition</option>
+<option value="Ureteral Ileal Conduit">Ureteral Ileal Conduit</option>
+<option value="Ureteral Reimplantation">Ureteral Reimplantation</option>
+<option value="Ureterectomy">Ureterectomy</option>
+<option value="Ureterectomy with Psoas Hitch">Ureterectomy with Psoas Hitch</option>
+<option value="Ureteroileal Reanastomosis">Ureteroileal Reanastomosis</option>
+<option value="Ureteroscopy Flexible">Ureteroscopy Flexible</option>
+<option value="Ureteroscopy Laser Lithotripsy Retrograd">Ureteroscopy Laser Lithotripsy Retrograd</option>
+<option value="Ureteroscopy Laser Lithotripsy Ureteral">Ureteroscopy Laser Lithotripsy Ureteral</option>
+<option value="Ureteroscopy with Laser Lithotripsy">Ureteroscopy with Laser Lithotripsy</option>
+<option value="Urethra Artificial Sphincter Insertion">Urethra Artificial Sphincter Insertion</option>
+<option value="Urethra Artificial Sphincter Removal">Urethra Artificial Sphincter Removal</option>
+<option value="Urethra Artificial Sphincter Revision">Urethra Artificial Sphincter Revision</option>
+<option value="Urethral Diverticulectomy">Urethral Diverticulectomy</option>
+<option value="Urethrectomy">Urethrectomy</option>
+<option value="Urethrolysis">Urethrolysis</option>
+<option value="Urethroplasty">Urethroplasty</option>
+<option value="Urethroplasty Stage One">Urethroplasty Stage One</option>
+<option value="Urinary Incontinence Repair with sling g">Urinary Incontinence Repair with sling g</option>
+<option value="Uterine Myomectomy">Uterine Myomectomy</option>
+<option value="Vagal Nerve Stimulator Battery Placement">Vagal Nerve Stimulator Battery Placement</option>
+<option value="Vagal Nerve Stimulator Battery Replaceme">Vagal Nerve Stimulator Battery Replaceme</option>
+<option value="Vagal Nerve Stimulator Placement">Vagal Nerve Stimulator Placement</option>
+<option value="Vagal Nerve Stimulator Replacement">Vagal Nerve Stimulator Replacement</option>
+<option value="Vaginal and Vulvar Laser Ablation">Vaginal and Vulvar Laser Ablation</option>
+<option value="Vaginal Cystectomy">Vaginal Cystectomy</option>
+<option value="Vaginal Enterocele Repair">Vaginal Enterocele Repair</option>
+<option value="Vaginal Laser Ablation">Vaginal Laser Ablation</option>
+<option value="Vaginal Mass Excision">Vaginal Mass Excision</option>
+<option value="Vaginal Wall Sling Repair with Cystocele">Vaginal Wall Sling Repair with Cystocele</option>
+<option value="Varicocele Repair Microsurgical">Varicocele Repair Microsurgical</option>
+<option value="Varicocelectomy Laparoscopic">Varicocelectomy Laparoscopic</option>
+<option value="Vascular Access Port Removal">Vascular Access Port Removal</option>
+<option value="Vasectomy">Vasectomy</option>
+<option value="Vein Saphenous Strippings Stab Phlebecto">Vein Saphenous Strippings Stab Phlebecto</option>
+<option value="Vena Cava Filter Placement">Vena Cava Filter Placement</option>
+<option value="Venography Extremity Bilateral">Venography Extremity Bilateral</option>
+<option value="Venography Extremity Unilateral">Venography Extremity Unilateral</option>
+<option value="Ventriculostomy and Laparoscopic Ventric">Ventriculostomy and Laparoscopic Ventric</option>
+<option value="Vesico Vaginal Fistula Repair">Vesico Vaginal Fistula Repair</option>
+<option value="Vitrectomy Pars Plana">Vitrectomy Pars Plana</option>
+<option value="Vocal Cord Injection">Vocal Cord Injection</option>
+<option value="Vulvar Laser Ablation">Vulvar Laser Ablation</option>
+<option value="Vulvectomy Radical">Vulvectomy Radical</option>
+<option value="Whipple Procedure">Whipple Procedure</option>
+<option value="Wound Closure">Wound Closure</option>
+<option value="Wound Irrigation and Debridement">Wound Irrigation and Debridement</option>
+<option value="Wound Irrigation and Debridement Lower E">Wound Irrigation and Debridement Lower E</option>
+<option value="Wrist Fusion">Wrist Fusion</option>
+<option value="XI Robot">XI Robot</option>
+<option value="Zenkers Diverticulum">Zenkers Diverticulum</option>
+</select>
+          
+        </div>
+        
+        <div class="w3-section">
+          <label>Patient Type</label>
+          <select class="w3-select" style="width:100%;" type="text" required name="Patient_type">
+          <option value=" " disabled="disabled" selected="selected">Please select the Patient Type</option>
+      <option value="Inpatient">Inpatient</option>
+<option value="Day Surgery">Day Surgery</option>
+<option value="Outpatient">Outpatient</option>
+<option value="Observation">Observation</option>
+<option value="Extended Recovery">Extended Recovery</option>
+<option value="Non Patient">Non Patient</option>
+<option value="Outpatient in a Bed">Outpatient in a Bed</option>
+<option value="Preadmit">Preadmit</option>
+
+      </select>
+        </div>
+        <div class="w3-section">
+          <label>Pre-Op-INR</label>
+          <input class="w3-input" style="width:100%;" type="text" required name="INR">
+        </div>
+        <div class="w3-section">
+          <label>Platelet Count</label>
+          <input class="w3-input" style="width:100%;" type="text" required name="platelet">
+        </div>
+        <div class="w3-section">
+          <label>Result Before Surgery</label>
+          <input class="w3-input" style="width:100%;" type="text" required name="ResultbeforeSurgery">
+        </div>
+        <button type="button" class="w3-button w3-teal w3-right" onclick="submitForm()">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+		<center>
+		
+		<div id="predict2" style="margin-top:140px"><br><br>
+		<div style="width: 451px ; height:290px;
+		   border: 2px solid grey; margin-top:100px">
+		<form action="test" method="post" enctype="multipart/form-data">
+		     <table>
+		     <tr><h2><div style="margin-top:30px">Upload a File to get Prediction</h2></div></tr>
+		     <tr>
+		       <td> <div style=" margin-right: 40px; margin-left: 40px; margin-top:30px; border: solid thin"><input type="file" name="file" style="width: 340px" required=""></div></td>
+		      </tr>
+		       
+		     <tr>
+		     <td> <div style=" margin-right: 140px; margin-left: 140px; margin-top: 20px"> <input name="Test" style="width: 104px; height: 27px" type="submit" value="Predict"> </div> </td>
+		     </tr>
+		     
+		     </form>
+		     </table>
+		</div> 
+		</div>
+		</center>
+<br><br><br><br>
+      </center>
+ <!---Help---->
+      <div class="w3-container w3-padding-64 w3-center" id="help">
+      <div class="w3-row-padding w3-padding-64 w3-container">
+         <div class="w3-content">
+            <div class="w3-twothird" align="left">
+            <h1>What is Train?</h1>
+            <h5 class="w3-padding-32"> Whenever there are hundreds of new patients records, and it has been a while, since the old metrics to train have been used, Hit the Train button. </h5></br>
+               <h1>How to Train? </h1>
+               <h5 class="w3-padding-32">
+                  Upload a file to Train: <br>
+                  Please enter a CSV file with the below columns in same order: <br>
+                  Masked FIN, Age, Sequence No., SURG_Procedure, Duration of Surgery(hh:mm), SURGICAL_SPECIALITY, Surgeon Hash Name, PATIENT_TYPE,
+                   SN-BM-Pre-Op INR, SN-BM -Pre-Op Platelet Count, SN-BM-PRBC Ordered, Allogenic Blood Transfusion, SN-BM-Red Blood Cells,
+                   SN-BM- Fresh Frozen Plasma, SN-BM- Platelets, SN-BM-Cryoprecipitate, ResultsBeforeSurgery, ResultAfterSurgery, EBL <br>
+                  <br>
+                  <b>Fill missing records</b> - Check this <b>checkbox</b> to trigger the Recommendation Engine module to fill the missing data,
+                   if any, in the training data. This generates a csv file that gets downloaded to the temp directory and be referred any time.
+                    <br> <br>
+                  <b>Click on Train button to fire the Prediction module to learn on the patient data fed.</b><br>
+                  
+               </h5>
+            </div>
+            <div class="w3-third w3-center">
+               <i class="fa fa-wheelchair w3-padding-64 w3-text-red"></i>
+               <i class="fa fa-hospital-o w3-padding-64 w3-text-red"></i>
+            </div>
+         </div>
+      </div>
+      <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+         <div class="w3-content">
+            <div class="w3-third w3-center">
+               <i class="fa fa-heartbeat w3-padding-64 w3-text-red w3-margin-right"></i>
+            </div>
+            <div class="w3-twothird" align="left">
+            <h1>What is Predict?</h1>
+            <h5 class="w3-padding-32"> To get the predicted amount of blood to be pre-ordered before a surgery, Use Predict.</h5></br>
+               
+               <h1>How to Predict?</h1>
+               <h5 class="w3-padding-32">Upload patient record in the form and hit Predict. For multiple patients the system generates CSV with predicted values for SN-BM-Red Blood Cells, SN-BM-Fresh Frozen Plasma,
+                SN-BM-Platelets, SN-BM- Cryoprecipitate, Allogenic (Yes/ No).
+                <br> <i>Based on these values, it can be decided how much and what type of blood to be preordered. The amount predicted is accurate 78 out of 100 times.</i> </h5>
+            </div>
+         </div>
+      </div>
+
+<!-- Team Container -->
+      <div class="w3-container w3-padding-64 w3-center" id="about">
+         <h2>Keck Miners</h2>
+         <p>Meet the team :</p>
+         <div class="w3-row">
+            <br>
+            <div class="w3-quarter">
+               <img src={{ url_for('static', filename='Anand1.png')}} style="width:50%" class="w3-circle w3-hover-opacity">
+               <h3>Anand Prashar</h3>
+               <p>Team Lead</p>
+               <p>aprashar@usc.edu</p>
+            </div>
+            <div class="w3-quarter">
+               <img src={{ url_for('static', filename='vijay.png')}} style="width:45%" class="w3-circle w3-hover-opacity">
+               <h3>Vijaykumar Gedigeri</h3>
+               <p>Project Programmer</p>
+               <p>gedigeri@usc.edu</p>
+            </div>
+            <div class="w3-quarter">
+              <img src={{ url_for('static', filename='Ankita.png')}}  style="width:45%" class="w3-circle w3-hover-opacity">
+               <h3>Ankita Aggarwal</h3>
+               <p>Project Programmer</p>
+               <p>ankitaa@usc.edu</p>
+            </div>
+            <div class="w3-quarter">
+              <img src={{ url_for('static', filename='aditi.png')}}  style="width:50%" class="w3-circle w3-hover-opacity">
+               <h3>Aditi Agarwal</h3>
+               <p>Project Programmer</p>
+               <p>aditiagr@usc.edu</p>
+            </div>
+         </div>
+      </div>
+      <footer class="w3-container w3-padding-32 w3-center w3-opacity">
+   			 <p class="w3-margin w3-xlarge"><font size="3px">Site created and maintained by Ankita Aggarwal & Aditi Agarwal | USC | 90089 Los Angeles</font></p>
+        </footer>
+      <script>
+         // Used to toggle the menu on small screens when clicking on the menu button
+         function myFunction() {
+             var x = document.getElementById("navDemo");
+             if (x.className.indexOf("w3-show") == -1) {
+                 x.className += " w3-show";
+             } else { 
+                 x.className = x.className.replace(" w3-show", "");
+             }
+         }
+         function submitForm() {
+         var frm = document.getElementsByName('form1')[0];
+   			frm.submit(); // Submit
+   			frm.reset();  // Reset
+   		 return false;
+            }
+      </script>
+   </body>
+</html>
